@@ -16,38 +16,39 @@ public class desarrollo {
     }
 
     public static void menuAccion(){
+        int[]x=generarArreglo();
         int a= -1;
         do{
             a=validar(3);
             switch (a){
                 case 1:
                     System.out.println("Los pares adyacentes son");
-
+                    mostrarParesAdyacentes(x);
                     break;
                 case 2:
                     System.out.println("El mayor producto de adyacentes");
-
+                    mayorProductoParesAdyacentes(x);
                     break;
                 case 3:
                     System.out.println("adiós");
                     break;
+                default:
+                    System.out.println("elige una opción válida");
+                    break;
             }
-            if(a!= 3){
-                System.out.println("¿desea hacer otra cosa? presione 3 para salir");
-            }
+
         }while(a!=3);
     }
 
-    public static void generarArreglo(int[] arr){
+    public static int[] generarArreglo(){
+        int[] arr;
         Random rnum= new Random();
         int n= rnum.nextInt(8)+2;
         arr=new int[n];
         for (int i = 0; i < arr.length; i++){
                 arr[i]=rnum.nextInt(2000)-1000;
-                System.out.print("[" +arr[i]+ "]");
-                System.out.println(" ");
         }
-
+    return arr;
     }
 
     public static void mostrarParesAdyacentes(int[] arr) {
@@ -66,18 +67,18 @@ public class desarrollo {
         return contador;
     }
 
-    public static void mayorProductoParesAdyacentes(int[] arr){
-        int numeroMayor= -1000000;
+    public static int mayorProductoParesAdyacentes(int[] arr){
         int calcularProducto;
-        int temp;
+        int temp=0;
+        int productoMayor=0;
         for(int i = 1; i < arr.length; i++) {
             calcularProducto=(arr[i-1])*(arr[i]);
-            temp= calcularProducto;
-            if(temp>numeroMayor){
-                numeroMayor=temp;
+            temp = calcularProducto;
+            if(temp>productoMayor){
+                productoMayor=temp;
             }
         }
-        System.out.println("["+numeroMayor+"]");
+        return productoMayor;
     }
 
     public static int validar(int x) {

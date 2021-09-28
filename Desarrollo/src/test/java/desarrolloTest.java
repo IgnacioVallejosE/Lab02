@@ -6,5 +6,15 @@ class desarrolloTest {
 
     @Test
     void contadorParesAdyacentes() {
+
+
+
     }
+    @Test
+    void mayorProductoParesAdyacentes(){
+
+
+
+    }
+
 }
