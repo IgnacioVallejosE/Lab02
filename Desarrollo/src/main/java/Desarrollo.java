@@ -19,5 +19,18 @@ public class Desarrollo {
             System.out.println("(" + arreglo[i-1] +","+arreglo[i]+")");
         }
     }
-
+    public static void mayorProductoParesAdyacentes(int[] arr){
+        int numeroMayor= -1000000;
+        int calcularProducto;
+        int temp;
+        for(int i = 1; i < arr.length; i++) {
+            calcularProducto=(arr[i-1])*(arr[i]);
+            temp= calcularProducto;
+            if(temp>numeroMayor){
+                numeroMayor=temp;
+            }
+        }
+        System.out.println("["+numeroMayor+"]");
+    }
 }
+
