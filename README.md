@@ -1,5 +1,5 @@
 # Lab02
-integrantes: Belén Sánchez - Ignacio Vallejos
+integrantes: Belén Pinilla - Ignacio Vallejos
 
 Belén: 
 mostrarMenu()
