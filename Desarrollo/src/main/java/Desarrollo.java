@@ -12,6 +12,12 @@ public class Desarrollo {
             System.out.println(" ");
         }
     }
+    public static int ContadorParesAdyacentes(int contador, int[] arr){
+        for (int i = 1; i < arr.length; i++) {
+            contador++;
+        }
+        return contador;
+    }
 
     public static void mostrarParesAdyacentes(int[] arreglo) {
         System.out.println("Los pares adyacentes son: ");
