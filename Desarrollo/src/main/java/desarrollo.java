@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class desarrollo {
@@ -13,7 +14,7 @@ public class desarrollo {
         System.out.println("*****************************************************");
     }
 
-    public static void menuAccion(double[][] arreglo){
+    public static void menuAccion(){
         int a= -1;
         do{
             a=validar(3);
@@ -36,13 +37,32 @@ public class desarrollo {
         }while(a!=3);
     }
 
-    public static void llenarArreglo(double arr[]){
-        for (int i = 0; i < 10; i++){
-                arr[i]= (Math.random()*9.9);
+    public static void generarArreglo(int arr[]){
+        Random rnum= new Random();
+        int n= rnum.nextInt(8)+2;
+        arr=new int[n];
+        for (int i = 0; i < arr.length; i++){
+                arr[i]=rnum.nextInt(2000)-1000;
                 System.out.print("[" +arr[i]+ "]");
                 System.out.println(" ");
-
         }
+    }
+
+    public static void mostrarParesAdyacentes(int[] arreglo) {
+        System.out.println("Los pares adyacentes son: ");
+        for (int i = 1; i < arreglo.length; i++) {
+            System.out.println("(" + arreglo[i-1] +","+arreglo[i]+")");
+        }
+    }
+
+    public static void mayorProductoParesAdyacentes(int [] arr){
+        int numeroMayor= 1;
+        for (int i = 0; i < 10; i++) {
+                if (arr[i] > numeroMayor){
+                    numeroMayor= arr[i];
+                }
+        }
+        System.out.println("["+numeroMayor+"]");
     }
 
     public static int validar(int x) {
