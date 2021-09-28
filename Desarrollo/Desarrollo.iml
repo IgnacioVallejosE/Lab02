@@ -11,5 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <orderEntry type="jdk" jdkName="openjdk-16" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
