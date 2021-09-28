@@ -4,16 +4,16 @@ import java.util.Scanner;
 public class Desarrollo {
 
 
-    public static void mostrarMenu(){
+   public static void mostrarMenu(){
         System.out.println();
         System.out.println("indique que desea hacer");
-        System.out.println("*******");
+        System.out.println("*****************************************************");
         System.out.println("*                                                   *");
         System.out.println("* [1] Mostrar pares adyacentes                      *");
         System.out.println("* [2] Mostrar el mayor valor de producto            *");
         System.out.println("* [3] Salir                                         *");
         System.out.println("*                                                   *");
-        System.out.println("*******");
+        System.out.println("*****************************************************");
     }
 
     public static void menuAccion(){
